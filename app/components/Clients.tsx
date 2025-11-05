@@ -3,32 +3,32 @@ import Image from 'next/image';
 const clientLogos = [
   { 
     name: 'Jetex Executive Aviation DWC',
-    logo: '/assets/logos/jetex.png',
+    logo: 'assets/logos/jetex.png',
     alt: 'Jetex Executive Aviation DWC Logo'
   },
   { 
     name: 'Emirates Golf Club',
-    logo: '/assets/logos/emirates-golf-club.png',
+    logo: 'assets/logos/emirates-golf-club.png',
     alt: 'Emirates Golf Club Logo'
   },
   { 
     name: 'SUSHISAMBA',
-    logo: '/assets/logos/sushisamba.png',
+    logo: 'assets/logos/sushisamba.png',
     alt: 'SUSHISAMBA Logo'
   },
   { 
     name: 'Al Bateen Executive Airport',
-    logo: '/assets/logos/al-bateen.png',
+    logo: 'assets/logos/al-bateen.png',
     alt: 'Al Bateen Executive Airport Logo'
   },
   { 
     name: 'Hampton Restaurant',
-    logo: '/assets/logos/hampton.png',
+    logo: 'assets/logos/hampton.png',
     alt: 'Hampton Restaurant Logo'
   },
   { 
     name: 'Leather Doctor',
-    logo: '/assets/logos/leather-doctor.png',
+    logo: 'assets/logos/leather-doctor.png',
     alt: 'Leather Doctor Logo'
   },
 ];

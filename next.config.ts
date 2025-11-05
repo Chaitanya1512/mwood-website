@@ -18,6 +18,7 @@ const config: NextConfig = {
   // set basePath to the repository name so asset URLs resolve correctly.
   // If you later use a custom domain at the root, remove this.
   basePath: '/mwood-website',
+  assetPrefix: '/mwood-website',
   output: 'export',
   // Silence workspace root warning by explicitly setting the root for Turbopack
   turbopack: {
