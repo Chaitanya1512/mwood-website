@@ -1,4 +1,7 @@
+"use client";
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 interface Service {
   title: string;
@@ -30,23 +33,47 @@ const serviceData: Service[] = [
 ];
 
 export default function Services() {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0 }
+  };
+
   return (
-    <section id="services" className="w-full bg-[#007ec7] py-20 md:py-32">
+  <section id="services" className="w-full bg-[#007ec7] py-20 md:py-32">
       <div className="page-margin">
         <div className="mb-16 text-center">
-          <h2 className="text-4xl font-bold text-white md:text-5xl animate-on-scroll animate-fade-in-up">
+          <motion.h2
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="text-4xl font-bold text-white md:text-5xl"
+          >
             Expert Cleaning Solutions
-          </h2>
-          <p className="mt-6 text-xl text-white animate-on-scroll animate-fade-in-up animate-delay-200">
+          </motion.h2>
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-6 text-xl text-white"
+          >
             Advanced techniques and professional expertise for exceptional results across residential and commercial spaces.
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {serviceData.map((service, index) => (
-            <div
+            <motion.div
               key={service.title}
-              className={`group overflow-hidden rounded-2xl bg-white shadow-2xl transition-all duration-500 hover:shadow-3xl hover:-translate-y-2 animate-on-scroll animate-slide-in-scale animate-delay-${(index + 1) * 100}`}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.1 * index, ease: [0.22, 1, 0.36, 1] }}
+              className={`group overflow-hidden rounded-2xl bg-white shadow-2xl transition-all duration-500 hover:shadow-3xl hover:-translate-y-2`}
             >
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
@@ -63,7 +90,7 @@ export default function Services() {
                 </h3>
                 <p className="text-gray-700 leading-relaxed">{service.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

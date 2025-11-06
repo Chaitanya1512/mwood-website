@@ -14,7 +14,7 @@ function QuoteForm() {
             autoComplete="name"
             required
             placeholder="Enter your full name"
-            className="block w-full px-4 py-3 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-[#007ec7] focus:ring-4 focus:ring-[#007ec7]/10 focus:bg-white transition-all duration-200 placeholder-gray-500"
+            className="block w-full px-4 py-3 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-[#007ec7] focus:ring-4 focus:ring-[#007ec7]/10 focus:bg-white transition-all duration-300 placeholder-gray-500"
           />
         </div>
         <div>
@@ -28,7 +28,7 @@ function QuoteForm() {
             autoComplete="tel"
             required
             placeholder="+971 XX XXX XXXX"
-            className="block w-full px-4 py-3 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-[#007ec7] focus:ring-4 focus:ring-[#007ec7]/10 focus:bg-white transition-all duration-200 placeholder-gray-500"
+            className="block w-full px-4 py-3 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-[#007ec7] focus:ring-4 focus:ring-[#007ec7]/10 focus:bg-white transition-all duration-300 placeholder-gray-500"
           />
         </div>
       </div>
@@ -43,7 +43,7 @@ function QuoteForm() {
           id="email"
           autoComplete="email"
           placeholder="your.email@example.com"
-          className="block w-full px-4 py-3 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-[#007ec7] focus:ring-4 focus:ring-[#007ec7]/10 focus:bg-white transition-all duration-200 placeholder-gray-500"
+          className="block w-full px-4 py-3 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-[#007ec7] focus:ring-4 focus:ring-[#007ec7]/10 focus:bg-white transition-all duration-300 placeholder-gray-500"
         />
       </div>
       
@@ -55,7 +55,7 @@ function QuoteForm() {
           id="service"
           name="service"
           required
-          className="block w-full px-4 py-3 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-[#007ec7] focus:ring-4 focus:ring-[#007ec7]/10 focus:bg-white transition-all duration-200 appearance-none cursor-pointer"
+          className="block w-full px-4 py-3 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-[#007ec7] focus:ring-4 focus:ring-[#007ec7]/10 focus:bg-white transition-all duration-300 appearance-none cursor-pointer"
         >
           <option value="">Select a service...</option>
           <option value="sofa">Sofa Cleaning</option>
@@ -75,14 +75,14 @@ function QuoteForm() {
           name="message"
           rows={4}
           placeholder="Tell us about your cleaning requirements, property size, or any specific needs..."
-          className="block w-full px-4 py-3 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-[#007ec7] focus:ring-4 focus:ring-[#007ec7]/10 focus:bg-white transition-all duration-200 placeholder-gray-500 resize-none"
+          className="block w-full px-4 py-3 text-gray-900 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-[#007ec7] focus:ring-4 focus:ring-[#007ec7]/10 focus:bg-white transition-all duration-300 placeholder-gray-500 resize-none"
         />
       </div>
       
       <div className="pt-4">
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-[#007ec7] to-[#009fe3] text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl hover:from-[#006bb3] hover:to-[#008bd6] transform hover:scale-[1.02] transition-all duration-200 focus:ring-4 focus:ring-[#007ec7]/30"
+          className="w-full bg-gradient-to-r from-[#007ec7] to-[#009fe3] text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl hover:from-[#006bb3] hover:to-[#008bd6] transform hover:scale-[1.02] transition-all duration-300 focus:ring-4 focus:ring-[#007ec7]/30"
         >
           Get Your Free Quote
         </button>

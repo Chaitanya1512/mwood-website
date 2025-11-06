@@ -1,28 +1,12 @@
 'use client';
 
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const targetId = href.replace('#', '');
-    const targetElement = document.getElementById(targetId);
-    
-    if (targetElement) {
-      // Get the navbar height to account for offset
-      const navbarHeight = 80;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
 
   return (
-    <section id="home" className="relative flex h-[70vh] w-full min-h-[520px] items-center">
+  <section id="home" className="relative flex h-[70vh] w-full min-h-[520px] items-center">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -39,21 +23,35 @@ export default function Hero() {
       {/* Content */}
       <div className="page-margin relative z-10 text-center w-full">
         <div className="max-w-4xl mx-auto">
-          <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-white text-shadow-white md:text-6xl animate-fade-in-up">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="mb-6 text-4xl font-extrabold tracking-tight text-white text-shadow-white md:text-6xl"
+          >
             Sparkling Clean. Every Time.
-          </h1>
-          <p className="mb-8 max-w-2xl mx-auto text-lg text-gray-100 md:text-xl leading-relaxed animate-fade-in-up animate-delay-200">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="mb-8 max-w-2xl mx-auto text-lg text-gray-100 md:text-xl leading-relaxed"
+          >
             Professional residential and commercial cleaning in Dubai using safe chemicals and pro-grade equipment.
-          </p>
-          <div className="flex justify-center animate-fade-in-up animate-delay-400">
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="flex justify-center"
+          >
             <a
               href="#contact"
-              onClick={(e) => handleSmoothScroll(e, '#contact')}
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#007ec7] to-[#009fe3] px-10 py-4 text-lg font-bold text-white shadow-xl transition-all duration-300 hover:shadow-2xl hover:from-[#006bb3] hover:to-[#008bd6] transform hover:-translate-y-1 focus:ring-4 focus:ring-[#007ec7]/50"
             >
               Get a Free Quote
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

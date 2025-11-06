@@ -1,5 +1,7 @@
 import type { NextConfig } from 'next'
 
+const isDev = process.env.NODE_ENV === 'development'
+
 const config: NextConfig = {
   // Add this 'images' configuration
   images: {
@@ -15,10 +17,9 @@ const config: NextConfig = {
     ],
   },
   // When deploying to a project site like https://<user>.github.io/mwood-website
-  // set basePath to the repository name so asset URLs resolve correctly.
-  // If you later use a custom domain at the root, remove this.
-  basePath: '/mwood-website',
-  assetPrefix: '/mwood-website',
+  // we use basePath/assetPrefix only outside of development so local dev runs at '/'
+  basePath: isDev ? undefined : '/mwood-website',
+  assetPrefix: isDev ? undefined : '/mwood-website',
   output: 'export',
   // Silence workspace root warning by explicitly setting the root for Turbopack
   turbopack: {
