@@ -1,25 +1,15 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import About from './components/About';
-import Equipment from './components/Equipment';
-import Clients from './components/Clients';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+"use client";
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col">
-      <Navbar />
-      
-      <Hero />
-      <Services />
-      <About />
-      <Equipment />
-      <Clients />
-      <Contact />
-      
-      <Footer />
-    </main>
-  );
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
+// Static-friendly redirect from '/' to the default locale route.
+// Using client-side navigation ensures it works with `output: 'export'`
+// and respects basePath in production.
+export default function RootRedirect() {
+  const router = useRouter();
+  useEffect(() => {
+    router.replace("/en");
+  }, [router]);
+  return null;
 }

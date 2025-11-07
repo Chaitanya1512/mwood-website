@@ -1,0 +1,127 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "equipment": "Equipment",
+    "clients": "Clients"
+  },
+  "Hero": {
+    "title": "Sparkling Clean. Every Time.",
+    "subtitle": "Professional residential and commercial cleaning in Dubai using safe chemicals and pro-grade equipment."
+  },
+  "Common": {
+    "cta": "Get a Free Quote"
+  },
+  "Services": {
+    "heading": "Expert Cleaning Solutions",
+    "subheading": "Advanced techniques and professional expertise for exceptional results across residential and commercial spaces.",
+    "items": {
+      "sofa": {
+        "title": "Premium Sofa Cleaning",
+        "description": "Transform your furniture with our advanced deep cleaning techniques. We eliminate stubborn stains, odors, and allergens using ISO-certified, non-toxic solutions that leave your sofa looking and feeling like new."
+      },
+      "carpet": {
+        "title": "Professional Carpet Cleaning",
+        "description": "Revitalize your carpets with our state-of-the-art cleaning technology. Our certified technicians use eco-friendly products and advanced extraction methods to remove deep-seated dirt, stains, and allergens."
+      },
+      "curtain": {
+        "title": "Expert Curtain Care",
+        "description": "Restore the beauty of your curtains with our specialized cleaning process. We preserve fabric integrity and colors while eliminating dust, allergens, and odors using premium ISO-certified treatments."
+      },
+      "deep": {
+        "title": "Comprehensive Deep Cleaning",
+        "description": "Experience our thorough sanitization service that covers every detail. From disinfecting bathrooms and kitchens to appliance cleaning and stain removal, we deliver a complete transformation of your space."
+      }
+    }
+  },
+  "About": {
+    "heading": "About MWood Cleaning Services",
+    "intro": "MWood Cleaning Services is a professional team dedicated to delivering top‑quality cleaning for both residential and commercial spaces across Dubai. We combine trained staff, pro‑grade equipment and safe, ISO‑certified chemicals to achieve consistently excellent results.",
+    "missionHeading": "Our Mission",
+    "mission": "Create clean, healthy environments by delivering exceptional service with a focus on quality, reliability and customer satisfaction—every visit."
+  },
+  "Equipment": {
+    "heading": "Professional Equipment & Chemicals",
+    "description": "We don't just clean, we restore. We use industry-leading Karcher machines and safe, ISO-certified chemicals to ensure a deep clean without harming your valuable carpets, sofas, or your family's health.",
+    "features": {
+      "feature1": "State-of-the-art Karcher Puzzi 10/2 Adv extraction technology",
+      "feature2": "Advanced Karcher BDS 43/180 C disc cleaning systems",
+      "feature3": "Premium ISO-certified eco-friendly cleaning solutions",
+      "feature4": "Specialized CarpetPro RM 760 restoration treatments"
+    }
+  },
+  "Clients": {
+    "heading": "Trusted By Dubai's Leading Businesses",
+    "subheading": "Join our prestigious client roster across hospitality, aviation, and luxury sectors",
+    "logos": {
+      "jetex": {
+        "name": "Jetex Executive Aviation DWC",
+        "alt": "Jetex Executive Aviation DWC Logo"
+      },
+      "emiratesGolfClub": {
+        "name": "Emirates Golf Club",
+        "alt": "Emirates Golf Club Logo"
+      },
+      "sushisamba": {
+        "name": "SUSHISAMBA",
+        "alt": "SUSHISAMBA Logo"
+      },
+      "alBateen": {
+        "name": "Al Bateen Executive Airport",
+        "alt": "Al Bateen Executive Airport Logo"
+      },
+      "hampton": {
+        "name": "Hampton Restaurant",
+        "alt": "Hampton Restaurant Logo"
+      },
+      "leatherDoctor": {
+        "name": "Leather Doctor",
+        "alt": "Leather Doctor Logo"
+      }
+    }
+  },
+  "Contact": {
+    "heading": "Get a Free, No-Obligation Quote",
+    "subheading": "Contact us today and let us bring new life to your space.",
+    "formHeading": "Request Your Quote",
+    "formSubheading": "Fill out the form below and we'll get back to you quickly",
+    "form": {
+      "fullName": "Full Name *",
+      "fullNamePlaceholder": "Enter your full name",
+      "phone": "Phone Number *",
+      "phonePlaceholder": "+971 XX XXX XXXX",
+      "email": "Email Address",
+      "emailPlaceholder": "your.email@example.com",
+      "service": "Service Needed *",
+      "servicePlaceholder": "Select a service...",
+      "services": {
+        "sofa": "Sofa Cleaning",
+        "carpet": "Carpet Cleaning",
+        "curtain": "Curtain Cleaning",
+        "deep": "Deep Cleaning",
+        "other": "Other"
+      },
+      "details": "Additional Details",
+      "detailsPlaceholder": "Tell us about your cleaning requirements, property size, or any specific needs...",
+      "submit": "Get Your Free Quote",
+      "responseTime": "We'll respond within 24 hours with a customized quote"
+    },
+    "directHeading": "Or Contact Us Directly",
+    "directSubheading": "Feel free to call or email us for immediate assistance.",
+    "managerGeneral": "General Manager",
+    "managerOperations": "Operation Manager",
+    "emailLabel": "Email",
+    "addressLabel": "Address",
+    "address": "MWOOD CLEANING SERVICES\nDUBAI - UAE"
+  },
+  "Footer": {
+    "copyright": "MWood Cleaning Services. All Rights Reserved.",
+    "locationLine": "Dubai, UAE | info@mwooduae.com"
+  }
+  ,
+  "Meta": {
+    "title": "MWood Cleaning Services | Dubai",
+    "description": "Sparkling Clean. Every Time. Professional residential & commercial cleaning in Dubai."
+  }
+}

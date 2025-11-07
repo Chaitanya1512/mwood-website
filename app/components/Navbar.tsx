@@ -4,8 +4,13 @@ import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './LanguageSwitcher';
+import { Suspense } from 'react';
 
 export default function Navbar() {
+  const tNav = useTranslations('Navbar');
+  const tCommon = useTranslations('Common');
   const [isOpen, setIsOpen] = useState(false);
 
   // Optional: lock body scroll when mobile menu is open
@@ -29,11 +34,11 @@ export default function Navbar() {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Equipment', href: '#equipment' },
-    { name: 'Clients', href: '#clients' },
+    { name: tNav('home'), href: '#home' },
+    { name: tNav('services'), href: '#services' },
+    { name: tNav('about'), href: '#about' },
+    { name: tNav('equipment'), href: '#equipment' },
+    { name: tNav('clients'), href: '#clients' },
   ];
 
   return (
@@ -49,8 +54,8 @@ export default function Navbar() {
             MWood <span className="text-[#009fe3]">Services</span>
           </a>
 
-          {/* Desktop Nav */}
-          <div className="hidden space-x-6 md:flex">
+          {/* Desktop Nav (links) */}
+          <div className="hidden items-center gap-6 md:flex">
             {navItems.map((item, index) => (
               <a
                 key={item.name}
@@ -62,13 +67,18 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Contact Button */}
-          <a
-            href="#contact"
-            className="hidden rounded-md bg-[#007ec7] px-5 py-2.5 text-sm font-medium text-white shadow hover:bg-[#007ec7]/90 md:block"
-          >
-            Get a Free Quote
-          </a>
+          {/* Desktop Actions: Language + CTA */}
+          <div className="hidden md:flex items-center gap-3">
+            <Suspense fallback={null}>
+              <LanguageSwitcher />
+            </Suspense>
+            <a
+              href="#contact"
+              className="rounded-md bg-[#007ec7] px-5 py-2.5 text-sm font-medium text-white shadow hover:bg-[#007ec7]/90"
+            >
+              {tCommon('cta')}
+            </a>
+          </div>
           
           {/* Mobile Menu Button (Add functionality later) */}
           <div className="md:hidden">
@@ -160,13 +170,18 @@ export default function Navbar() {
 
             {/* Bottom Actions */}
             <div className="absolute inset-x-0 bottom-0 p-6">
-              <a
-                href="#contact"
-                onClick={() => setIsOpen(false)}
-                className="mb-3 inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#007ec7] to-[#009fe3] px-5 py-3 text-white text-base font-semibold shadow-lg hover:from-[#006bb3] hover:to-[#008bd6] transition-colors"
-              >
-                Get a Free Quote
-              </a>
+              <div className="mb-3 flex items-center gap-3">
+                <Suspense fallback={null}>
+                  <LanguageSwitcher placement="top" onSelect={() => setIsOpen(false)} />
+                </Suspense>
+                <a
+                  href="#contact"
+                  onClick={() => setIsOpen(false)}
+                  className="inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#007ec7] to-[#009fe3] px-5 py-3 text-white text-base font-semibold shadow-lg hover:from-[#006bb3] hover:to-[#008bd6] transition-colors"
+                >
+                  {tCommon('cta')}
+                </a>
+              </div>
               <div className="flex items-center justify-center gap-4 text-sm text-gray-600">
                 <a href="tel:+971503545972" className="inline-flex items-center gap-2 hover:text-[#007ec7]">
                   <PhoneIcon className="h-4 w-4" /> +971 50-3545972
