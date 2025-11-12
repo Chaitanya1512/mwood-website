@@ -21,6 +21,11 @@ const config: NextConfig = {
   // we use basePath/assetPrefix only outside of development so local dev runs at '/'
   basePath: isDev ? undefined : '/mwood-website',
   assetPrefix: isDev ? undefined : '/mwood-website',
+  // Expose the base path to client code so runtime/static export markup can
+  // reference public assets correctly (e.g. /mwood-website/assets/...).
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isDev ? '' : '/mwood-website',
+  },
   output: 'export',
   // Silence workspace root warning by explicitly setting the root for Turbopack
   turbopack: {
