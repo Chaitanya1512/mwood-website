@@ -7,6 +7,7 @@ import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Suspense } from 'react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const tNav = useTranslations('Navbar');
@@ -49,9 +50,18 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#home"
-            className="text-3xl font-bold text-[#007ec7] transition-all duration-300 hover:scale-105"
+            className="flex items-center transition-transform duration-300 hover:scale-105"
+            aria-label="MWood Services Home"
           >
-            MWood <span className="text-[#009fe3]">Services</span>
+            <Image
+              src="/mwood_logo.png"
+              alt="MWood Services logo"
+              width={220}
+              height={56}
+              priority
+              className="h-12 md:h-14 w-auto"
+              sizes="(min-width: 768px) 224px, 180px"
+            />
           </a>
 
           {/* Desktop Nav (links) */}
@@ -139,8 +149,17 @@ export default function Navbar() {
             {/* Brand heading */}
             <div className="absolute top-6 left-6 right-16 flex items-center justify-center">
               <div className="text-center">
-                <div className="text-xl font-extrabold tracking-tight text-gray-900">MWood Services</div>
-                <div className="text-xs text-gray-500">Premium Cleaning in Dubai</div>
+                <div className="flex items-center justify-center">
+                  <Image
+                    src="/mwood_logo.png"
+                    alt="MWood Services logo"
+                    width={180}
+                    height={48}
+                    className="h-12 w-auto"
+                    sizes="(max-width: 768px) 180px, 224px"
+                  />
+                </div>
+                <div className="mt-1 text-xs text-gray-500">Premium Cleaning in Dubai</div>
               </div>
             </div>
 
